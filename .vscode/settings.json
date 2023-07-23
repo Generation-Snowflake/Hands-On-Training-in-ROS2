@@ -1,0 +1,40 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/cstick/ros2_workshop/install/class4_tf/lib/python3.8/site-packages",
+        "/home/cstick/ros2_workshop/install/broadcast_listen_py/lib/python3.8/site-packages",
+        "/home/cstick/ros2_ws/install/tank_robot/lib/python3.8/site-packages",
+        "/home/cstick/ros2_ws/install/examples_rclpy_minimal_subscriber/lib/python3.8/site-packages",
+        "/home/cstick/ros2_ws/install/examples_rclpy_minimal_service/lib/python3.8/site-packages",
+        "/home/cstick/ros2_ws/install/examples_rclpy_minimal_publisher/lib/python3.8/site-packages",
+        "/home/cstick/ros2_ws/install/examples_rclpy_minimal_client/lib/python3.8/site-packages",
+        "/home/cstick/ros2_ws/install/examples_rclpy_minimal_action_server/lib/python3.8/site-packages",
+        "/home/cstick/ros2_ws/install/examples_rclpy_minimal_action_client/lib/python3.8/site-packages",
+        "/home/cstick/ros2_ws/install/examples_rclpy_executors/lib/python3.8/site-packages",
+        "/home/cstick/ros2_ws/install/cam_sub/lib/python3.8/site-packages",
+        "/home/cstick/turtlebot3_ws/install/dwb_msgs/lib/python3.8/site-packages",
+        "/home/cstick/turtlebot3_ws/install/nav_2d_msgs/lib/python3.8/site-packages",
+        "/home/cstick/turtlebot3_ws/install/nav2_msgs/lib/python3.8/site-packages",
+        "/home/cstick/turtlebot3_ws/install/nav2_gazebo_spawner/lib/python3.8/site-packages",
+        "/home/cstick/turtlebot3_ws/install/nav2_common/lib/python3.8/site-packages",
+        "/opt/ros/foxy/lib/python3.8/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/cstick/ros2_workshop/install/class4_tf/lib/python3.8/site-packages",
+        "/home/cstick/ros2_workshop/install/broadcast_listen_py/lib/python3.8/site-packages",
+        "/home/cstick/ros2_ws/install/tank_robot/lib/python3.8/site-packages",
+        "/home/cstick/ros2_ws/install/examples_rclpy_minimal_subscriber/lib/python3.8/site-packages",
+        "/home/cstick/ros2_ws/install/examples_rclpy_minimal_service/lib/python3.8/site-packages",
+        "/home/cstick/ros2_ws/install/examples_rclpy_minimal_publisher/lib/python3.8/site-packages",
+        "/home/cstick/ros2_ws/install/examples_rclpy_minimal_client/lib/python3.8/site-packages",
+        "/home/cstick/ros2_ws/install/examples_rclpy_minimal_action_server/lib/python3.8/site-packages",
+        "/home/cstick/ros2_ws/install/examples_rclpy_minimal_action_client/lib/python3.8/site-packages",
+        "/home/cstick/ros2_ws/install/examples_rclpy_executors/lib/python3.8/site-packages",
+        "/home/cstick/ros2_ws/install/cam_sub/lib/python3.8/site-packages",
+        "/home/cstick/turtlebot3_ws/install/dwb_msgs/lib/python3.8/site-packages",
+        "/home/cstick/turtlebot3_ws/install/nav_2d_msgs/lib/python3.8/site-packages",
+        "/home/cstick/turtlebot3_ws/install/nav2_msgs/lib/python3.8/site-packages",
+        "/home/cstick/turtlebot3_ws/install/nav2_gazebo_spawner/lib/python3.8/site-packages",
+        "/home/cstick/turtlebot3_ws/install/nav2_common/lib/python3.8/site-packages",
+        "/opt/ros/foxy/lib/python3.8/site-packages"
+    ]
+}

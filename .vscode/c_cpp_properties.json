@@ -1,0 +1,47 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/cstick/turtlebot3_ws/install/turtlebot3_gazebo/include/**",
+        "/home/cstick/turtlebot3_ws/install/turtlebot3_fake_node/include/**",
+        "/home/cstick/turtlebot3_ws/install/smac_planner/include/**",
+        "/home/cstick/turtlebot3_ws/install/nav2_controller/include/**",
+        "/home/cstick/turtlebot3_ws/install/dwb_plugins/include/**",
+        "/home/cstick/turtlebot3_ws/install/dwb_critics/include/**",
+        "/home/cstick/turtlebot3_ws/install/dwb_core/include/**",
+        "/home/cstick/turtlebot3_ws/install/nav_2d_utils/include/**",
+        "/home/cstick/turtlebot3_ws/install/dwb_msgs/include/**",
+        "/home/cstick/turtlebot3_ws/install/nav_2d_msgs/include/**",
+        "/home/cstick/turtlebot3_ws/install/nav2_waypoint_follower/include/**",
+        "/home/cstick/turtlebot3_ws/install/nav2_regulated_pure_pursuit_controller/include/**",
+        "/home/cstick/turtlebot3_ws/install/nav2_recoveries/include/**",
+        "/home/cstick/turtlebot3_ws/install/nav2_planner/include/**",
+        "/home/cstick/turtlebot3_ws/install/nav2_navfn_planner/include/**",
+        "/home/cstick/turtlebot3_ws/install/nav2_core/include/**",
+        "/home/cstick/turtlebot3_ws/install/costmap_queue/include/**",
+        "/home/cstick/turtlebot3_ws/install/nav2_costmap_2d/include/**",
+        "/home/cstick/turtlebot3_ws/install/nav2_voxel_grid/include/**",
+        "/home/cstick/turtlebot3_ws/install/nav2_rviz_plugins/include/**",
+        "/home/cstick/turtlebot3_ws/install/nav2_map_server/include/**",
+        "/home/cstick/turtlebot3_ws/install/nav2_lifecycle_manager/include/**",
+        "/home/cstick/turtlebot3_ws/install/nav2_bt_navigator/include/**",
+        "/home/cstick/turtlebot3_ws/install/nav2_behavior_tree/include/**",
+        "/home/cstick/turtlebot3_ws/install/nav2_amcl/include/**",
+        "/home/cstick/turtlebot3_ws/install/nav2_util/include/**",
+        "/home/cstick/turtlebot3_ws/install/nav2_msgs/include/**",
+        "/opt/ros/foxy/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
