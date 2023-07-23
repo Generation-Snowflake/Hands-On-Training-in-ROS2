@@ -24,13 +24,8 @@ setup(
     entry_points={
         'console_scripts': [
             'assignment1 = class4_tf.assignment1:main',
-            'broadcaster = class4_tf.broadcaster:main'
+            'broadcaster = class4_tf.broadcaster:main',
+            'listener = class4_tf.listener:main'
         ],
     },
 )
-
-data_files=[
-
-    (os.path.join('share', package_name, 'launch'), 
-     glob(os.path.join('launch', '*launch.[pxy][yma]*'))),
-],
