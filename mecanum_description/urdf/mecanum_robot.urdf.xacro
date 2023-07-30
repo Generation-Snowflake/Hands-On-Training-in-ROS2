@@ -55,7 +55,7 @@
     mass="${wheel_mass}"
   />
 
-  <xacro:imu/>
+  <!-- <xacro:imu/> -->
   
   <xacro:generic_laser>
     <xacro:insert_block name="laser_pose" />

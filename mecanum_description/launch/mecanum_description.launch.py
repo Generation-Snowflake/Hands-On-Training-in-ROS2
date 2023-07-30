@@ -23,13 +23,12 @@ from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
 
-    urdf_path = PathJoinSubstitution(
-        [FindPackageShare("mecanum_description"), "urdf", "mecanum_robot.urdf.xacro"]
-    )
+    pkg_share = FindPackageShare('mecanum_description').find('mecanum_description')
+    robot_urdf = "mecanum_robot.urdf.xacro"
+    robot_rviz = "mecanum_description.rviz"
 
-    # rviz_config_path = PathJoinSubstitution(
-    #     [FindPackageShare('mecanum_description'), 'rviz', 'description.rviz']
-    # )
+    urdf_path = os.path.join(pkg_share, "urdf", robot_urdf)
+    rviz_config_path = os.path.join(pkg_share, "rviz", robot_rviz)
 
     return LaunchDescription([
         DeclareLaunchArgument(
@@ -44,11 +43,11 @@ def generate_launch_description():
             description='Launch joint_states_publisher'
         ),
 
-        # DeclareLaunchArgument(
-        #     name='rviz', 
-        #     default_value='false',
-        #     description='Run rviz'
-        # ),
+        DeclareLaunchArgument(
+            name='rviz', 
+            default_value='false',
+            description='Run rviz'
+        ),
 
         DeclareLaunchArgument(
             name='use_sim_time', 
@@ -79,15 +78,15 @@ def generate_launch_description():
             ]
         ),
 
-        # Node(
-        #     package='rviz2',
-        #     executable='rviz2',
-        #     name='rviz2',
-        #     output='screen',
-        #     arguments=['-d', rviz_config_path],
-        #     condition=IfCondition(LaunchConfiguration("rviz")),
-        #     parameters=[{'use_sim_time': LaunchConfiguration('use_sim_time')}]
-        # )
+        Node(
+            package='rviz2',
+            executable='rviz2',
+            name='rviz2',
+            output='screen',
+            arguments=['-d', rviz_config_path],
+            condition=IfCondition(LaunchConfiguration("rviz")),
+            parameters=[{'use_sim_time': LaunchConfiguration('use_sim_time')}]
+        )
     ])
 
 #sources: 
