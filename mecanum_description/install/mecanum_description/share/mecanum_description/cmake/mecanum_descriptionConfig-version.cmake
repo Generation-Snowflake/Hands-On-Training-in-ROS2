@@ -1,0 +1,1 @@
+/home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/mecanum_description/build/mecanum_description/ament_cmake_core/mecanum_descriptionConfig-version.cmake
