@@ -25,7 +25,8 @@ setup(
         'console_scripts': [
             'assignment1 = class4_tf.assignment1:main',
             'broadcaster = class4_tf.broadcaster:main',
-            'listener = class4_tf.listener:main'
+            'listener = class4_tf.listener:main',
+            'broadcast_fix = class4_tf.broadcast_fix:main',
         ],
     },
 )

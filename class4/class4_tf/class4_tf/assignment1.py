@@ -7,7 +7,7 @@ import math
 class TurtleLine(Node):
 
     def __init__(self, speed):
-        super().__init__('turtle_circle')
+        super().__init__('turtle_line')
         self.publisher_ = self.create_publisher(Twist, '/turtle1/cmd_vel', 10)
         self.timer = self.create_timer(0.1, self.timer_callback)
         self.speed = speed
