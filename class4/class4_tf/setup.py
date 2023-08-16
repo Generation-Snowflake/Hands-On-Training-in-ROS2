@@ -29,6 +29,7 @@ setup(
             'broadcast_fix = class4_tf.broadcast_fix:main',
             'assignment3_broadcast = class4_tf.assignment3_broadcast:main',
             'assignment3_listen = class4_tf.assignment3_listen:main',
+            'ans_assignment5 = class4_tf.ans_assignment5:main',
         ],
     },
 )
