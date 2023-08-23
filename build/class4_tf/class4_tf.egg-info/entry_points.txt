@@ -1,0 +1,9 @@
+[console_scripts]
+ans_assignment5 = class4_tf.ans_assignment5:main
+assignment1 = class4_tf.assignment1:main
+assignment3_broadcast = class4_tf.assignment3_broadcast:main
+assignment3_listen = class4_tf.assignment3_listen:main
+broadcast_fix = class4_tf.broadcast_fix:main
+broadcaster = class4_tf.broadcaster:main
+listener = class4_tf.listener:main
+

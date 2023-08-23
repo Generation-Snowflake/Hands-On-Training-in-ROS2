@@ -51,7 +51,7 @@ def generate_launch_description():
 
         DeclareLaunchArgument(
             name='use_sim_time', 
-            default_value='false',
+            default_value='true',
             description='Use simulation time'
         ),
 

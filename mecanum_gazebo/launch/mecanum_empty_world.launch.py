@@ -34,11 +34,13 @@ def generate_launch_description():
             arguments=["-topic", "robot_description", "-entity", "mecanum_robot"]
         ),
         
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(robot_descriptuon_path),
-            launch_arguments={
-                'use_sim_time': LaunchConfiguration('use_sim_time'),
-                'publish_joints': 'true',
-            }.items()
-        ),
+        # IncludeLaunchDescription(
+        #     PythonLaunchDescriptionSource(robot_descriptuon_path),
+        #     launch_arguments={
+        #         'use_sim_time': LaunchConfiguration('use_sim_time'),
+        #         'publish_joints': 'true',
+        #     }.items()
+        # ),
+
+        
     ])

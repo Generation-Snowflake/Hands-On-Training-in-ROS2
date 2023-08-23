@@ -1,0 +1,23 @@
+[0.910s] Invoking command in '/home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/build/class4_tf': PYTHONPATH=/home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/build/class4_tf/prefix_override:/home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/class4_tf/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/build/class4_tf/build --no-deps install_data
+[1.081s] running develop
+[1.191s] running egg_info
+[1.191s] writing class4_tf.egg-info/PKG-INFO
+[1.192s] writing dependency_links to class4_tf.egg-info/dependency_links.txt
+[1.192s] writing entry points to class4_tf.egg-info/entry_points.txt
+[1.192s] writing requirements to class4_tf.egg-info/requires.txt
+[1.192s] writing top-level names to class4_tf.egg-info/top_level.txt
+[1.211s] reading manifest file 'class4_tf.egg-info/SOURCES.txt'
+[1.212s] writing manifest file 'class4_tf.egg-info/SOURCES.txt'
+[1.232s] running build_ext
+[1.232s] Creating /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/class4_tf/lib/python3.8/site-packages/class4-tf.egg-link (link to .)
+[1.232s] Installing ans_assignment5 script to /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/class4_tf/lib/class4_tf
+[1.233s] Installing assignment1 script to /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/class4_tf/lib/class4_tf
+[1.233s] Installing assignment3_broadcast script to /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/class4_tf/lib/class4_tf
+[1.233s] Installing assignment3_listen script to /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/class4_tf/lib/class4_tf
+[1.233s] Installing broadcast_fix script to /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/class4_tf/lib/class4_tf
+[1.233s] Installing broadcaster script to /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/class4_tf/lib/class4_tf
+[1.233s] Installing listener script to /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/class4_tf/lib/class4_tf
+[1.233s] 
+[1.233s] Installed /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/build/class4_tf
+[1.233s] running install_data
+[1.254s] Invoked command in '/home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/build/class4_tf' returned '0': PYTHONPATH=/home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/build/class4_tf/prefix_override:/home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/class4_tf/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/build/class4_tf/build --no-deps install_data

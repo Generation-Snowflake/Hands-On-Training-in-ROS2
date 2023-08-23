@@ -1,0 +1,57 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found urdf: 2.4.0 (/opt/ros/foxy/share/urdf/cmake)
+-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/build/mecanum_description
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/launch/mecanum_description.launch.py
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/launch/simple_robot.launch.py
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/urdf/base_robot.urdf.xacro
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/urdf/basic_mobile_robot.urdf.xacro
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/urdf/generic_laser.urdf.xacro
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/urdf/laser.urdf.xacro
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/urdf/mecanum_drive.urdf.xacro
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/urdf/mecanum_properties.urdf.xacro
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/urdf/mecanum_robot.urdf.xacro
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/urdf/mecanum_wheel.urdf.xacro
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/rviz/description.rviz
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/rviz/mecanum_description.rviz
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/rviz/mobile_robot_config.rviz
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/meshes/arm_base.stl
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/meshes/bicep.stl
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/meshes/elbow.stl
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/meshes/robot_base.stl
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/meshes/wheel.stl
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/meshes/wrist.stl
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/ament_index/resource_index/package_run_dependencies/mecanum_description
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/ament_index/resource_index/parent_prefix_path/mecanum_description
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/environment/ament_prefix_path.sh
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/environment/ament_prefix_path.dsv
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/environment/path.sh
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/environment/path.dsv
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/local_setup.bash
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/local_setup.sh
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/local_setup.zsh
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/local_setup.dsv
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/package.dsv
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/ament_index/resource_index/packages/mecanum_description
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/cmake/mecanum_descriptionConfig.cmake
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/cmake/mecanum_descriptionConfig-version.cmake
+-- Symlinking: /home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/install/mecanum_description/share/mecanum_description/package.xml
