@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="ramen_restaurant">
+    <static>true</static>
+     <link name="link">
+      <visual name="ramen_restaurant_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ramen_restaurant/meshes/ramen_no_table.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="ramen_restaurant_collision">
+        <geometry>
+          <mesh>
+            <uri>model://ramen_restaurant/meshes/ramen_no_table.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    
+        <collision name='obstacle'>
+          <pose>-9.2 10.0 0 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.25</radius>
+              <length>3.0</length>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+
+        <visual name='obstacle'>
+          <pose>-9.2 10.0 0 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.25</radius>
+              <length>3.0</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/White</name>
+            </script>
+          </material>
+        </visual>
+
+      
+    </link>
+  </model>
+
+</sdf>

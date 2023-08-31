@@ -27,17 +27,10 @@ def generate_launch_description():
             description='Use simulation time'
         ),
         DeclareLaunchArgument(
-            name='use_simulator',
-            default_value='True',
-            description='Whether to start the simulator'),
-        DeclareLaunchArgument(
             name='headless',
             default_value='False',
             description='Whether to execute gzclient'),
 
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(empty_world_launch_path)
-        ),   
     
         Node(
             package='gazebo_ros',

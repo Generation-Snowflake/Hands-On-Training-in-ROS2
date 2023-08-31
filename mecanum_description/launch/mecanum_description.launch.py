@@ -51,7 +51,7 @@ def generate_launch_description():
 
         DeclareLaunchArgument(
             name='use_sim_time', 
-            default_value='true',
+            default_value='false',
             description='Use simulation time'
         ),
 
@@ -59,7 +59,12 @@ def generate_launch_description():
             package='joint_state_publisher',
             executable='joint_state_publisher',
             name='joint_state_publisher',
-            condition=IfCondition(LaunchConfiguration("publish_joints"))
+            condition=IfCondition(LaunchConfiguration("publish_joints")),
+            parameters=[
+                {
+                    'use_sim_time': LaunchConfiguration('use_sim_time'),
+                }
+            ]
             # parameters=[
             #     {'use_sim_time': LaunchConfiguration('use_sim_time')}
             # ] #since galactic use_sim_time gets passed somewhere and rejects this when defined from launch file
@@ -85,7 +90,6 @@ def generate_launch_description():
             output='screen',
             arguments=['-d', rviz_config_path],
             condition=IfCondition(LaunchConfiguration("rviz")),
-            parameters=[{'use_sim_time': LaunchConfiguration('use_sim_time')}]
         )
     ])
 

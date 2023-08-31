@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="hajameban_2">
+    <static>true</static>
+     <link name="link">
+      <visual name="hajameban_2_visual">
+        <geometry>
+          <mesh>
+            <uri>model://hajameban_2/meshes/hajameban_2.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="hajameban_2_collision">
+        <geometry>
+          <mesh>
+            <uri>model://hajameban_2/meshes/hajameban_2.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+
+
+      
+    </link>
+  </model>
+
+</sdf>

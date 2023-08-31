@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="mj_table">
+    <static>true</static>
+     <link name="link">
+      <visual name="mj_table_visual">
+        <geometry>
+          <mesh>
+            <uri>model://mj_table/meshes/mj_table.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mj_table_collision">
+        <geometry>
+          <mesh>
+            <uri>model://mj_table/meshes/mj_table.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+
+
+      
+    </link>
+  </model>
+
+</sdf>

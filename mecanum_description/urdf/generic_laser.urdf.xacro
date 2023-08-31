@@ -10,7 +10,7 @@
       max_angle="3.1416"
       min_range="0.08"
       max_range="12.0"
-      frame_id="laser"
+      frame_id="base_scan"
       topic_name="scan"
     >
       <xacro:insert_block name="origin" />

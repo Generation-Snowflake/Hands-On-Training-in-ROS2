@@ -1,9 +1,0 @@
-source;share/class4_tf/hook/pythonpath.ps1
-source;share/class4_tf/hook/pythonpath.dsv
-source;share/class4_tf/hook/pythonpath.sh
-source;share/class4_tf/hook/ament_prefix_path.ps1
-source;share/class4_tf/hook/ament_prefix_path.dsv
-source;share/class4_tf/hook/ament_prefix_path.sh
-source;../../build/class4_tf/share/class4_tf/hook/pythonpath_develop.ps1
-source;../../build/class4_tf/share/class4_tf/hook/pythonpath_develop.dsv
-source;../../build/class4_tf/share/class4_tf/hook/pythonpath_develop.sh

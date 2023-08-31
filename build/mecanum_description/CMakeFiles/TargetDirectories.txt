@@ -1,9 +1,0 @@
-/home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/build/mecanum_description/CMakeFiles/uninstall.dir
-/home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/build/mecanum_description/CMakeFiles/mecanum_description_uninstall.dir
-/home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/build/mecanum_description/CMakeFiles/test.dir
-/home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/build/mecanum_description/CMakeFiles/edit_cache.dir
-/home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/build/mecanum_description/CMakeFiles/rebuild_cache.dir
-/home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/build/mecanum_description/CMakeFiles/list_install_components.dir
-/home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/build/mecanum_description/CMakeFiles/install.dir
-/home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/build/mecanum_description/CMakeFiles/install/local.dir
-/home/com-27x/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/build/mecanum_description/CMakeFiles/install/strip.dir
