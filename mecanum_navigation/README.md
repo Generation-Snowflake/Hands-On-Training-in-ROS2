@@ -1,0 +1,5 @@
+- ros2 pkg create --build-type ament_python mecanum_navigation
+- sudo apt-get install ros-foxy-navigation2
+- sudo apt-get install ros-foxy-nav2-bt-navigator 
+- https://kaiyuzheng.me/documents/papers/ros_navguide.pdf
+- https://github.com/ros-planning/navigation2/tree/main/nav2_bringup

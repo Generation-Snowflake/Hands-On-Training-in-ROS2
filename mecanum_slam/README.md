@@ -1,0 +1,1 @@
+- ros2 run nav2_map_server map_saver_cli -f ~/gsf_workspace/HTROS2_ws/src/Hands-On-Training-in-ROS2/mecanum_slam/map/cafe_sim

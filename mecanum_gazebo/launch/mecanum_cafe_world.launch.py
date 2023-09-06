@@ -28,10 +28,15 @@ def generate_launch_description():
         #     default_value='true',
         #     description='Use simulation time'
         # ),
-         DeclareLaunchArgument(
+        DeclareLaunchArgument(
           name = 'world',
           default_value= cafe_world_path,
           description='SDF world file'),
+        DeclareLaunchArgument(
+            name='rviz', 
+            default_value='false',
+            description='Run rviz'
+        ),
         # IncludeLaunchDescription(
         #     PythonLaunchDescriptionSource(empty_world_launch_path)
         # ),   
@@ -77,6 +82,7 @@ def generate_launch_description():
             name='rviz2',
             output='screen',
             arguments=['-d', rviz_config_path],
+            condition=IfCondition(LaunchConfiguration("rviz")),
         )
         
     ])
