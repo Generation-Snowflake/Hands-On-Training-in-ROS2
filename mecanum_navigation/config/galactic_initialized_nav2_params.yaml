@@ -6,7 +6,7 @@ amcl:
     alpha3: 0.2
     alpha4: 0.2
     alpha5: 0.2
-    base_frame_id: "base_link" #
+    base_frame_id: "base_footprint" #
     beam_skip_distance: 0.5
     beam_skip_error_threshold: 0.9
     beam_skip_threshold: 0.3
@@ -38,6 +38,11 @@ amcl:
     z_rand: 0.5
     z_short: 0.05
     scan_topic: scan
+    set_initial_pose: True
+    initial_pose:
+      x: 0.0
+      y: 0.0
+      yaw: 0.0
 
 amcl_map_client:
   ros__parameters:
@@ -51,7 +56,7 @@ bt_navigator:
   ros__parameters:
     use_sim_time: False
     global_frame: map #
-    robot_base_frame: base_footprint #
+    robot_base_frame: base_link #
     odom_topic: /odom #
     default_bt_xml_filename: "navigate_w_replanning_and_recovery.xml"
     bt_loop_duration: 10
@@ -61,7 +66,7 @@ bt_navigator:
     groot_zmq_server_port: 1667
     plugin_lib_names: # import plugin
     - nav2_compute_path_to_pose_action_bt_node
-    #- nav2_compute_path_through_poses_action_bt_node
+    - nav2_compute_path_through_poses_action_bt_node
     - nav2_follow_path_action_bt_node
     - nav2_back_up_action_bt_node
     - nav2_spin_action_bt_node
@@ -125,9 +130,9 @@ controller_server: #DWB Controller
       plugin: "dwb_core::DWBLocalPlanner"
       debug_trajectory_details: True
       min_vel_x: -0.3 # ความเร็วน้อยสุด
-      min_vel_y: 0.0 #
+      min_vel_y: -0.3 #
       max_vel_x: 0.3 #
-      max_vel_y: 0.0 #
+      max_vel_y: 0.3 #
       max_vel_theta: 0.6 #
       min_speed_xy: 0.1 # ความเร็วเดินทาง
       max_speed_xy: 0.2 #
@@ -135,10 +140,10 @@ controller_server: #DWB Controller
       # Add high threshold velocity for turtlebot 3 issue.
       # https://github.com/ROBOTIS-GIT/turtlebot3_simulations/issues/75
       acc_lim_x: 2.5 #
-      acc_lim_y: 0.0 #
+      acc_lim_y: 2.5 #
       acc_lim_theta: 3.2
       decel_lim_x: -2.5
-      decel_lim_y: 0.0
+      decel_lim_y: -2.5
       decel_lim_theta: -3.2
       vx_samples: 20 #คิดเผื่อล่วงหน้า
       vy_samples: 5 #
@@ -173,7 +178,7 @@ local_costmap: #costmap ที่สร้างแค่บริเวณห�
       update_frequency: 5.0
       publish_frequency: 2.0
       global_frame: odom
-      robot_base_frame: base_footprint
+      robot_base_frame: base_link
       use_sim_time: False
       rolling_window: true #หมุนหน้าต่างตอนหุ่นยหมุน
       width: 4 #ขอบเขต localcostmap
@@ -232,7 +237,7 @@ global_costmap: #คิดจาก map เราอย่างเดียว
       update_frequency: 1.0 #
       publish_frequency: 1.0 # 
       global_frame: map #
-      robot_base_frame: base_footprint # or base_footprint
+      robot_base_frame: base_link # or base_footprint
       use_sim_time: False 
       robot_radius: 0.25 # ขนาดหุ่นยนต์ ตั้งให้เกินหุ่นยนต์
       resolution: 0.05
@@ -329,7 +334,7 @@ recoveries_server:
     wait:
       plugin: "nav2_recoveries/Wait"
     global_frame: odom
-    robot_base_frame: base_footprint
+    robot_base_frame: base_link
     transform_timeout: 0.1
     use_sim_time: false
     simulate_ahead_time: 2.0

@@ -60,7 +60,7 @@ def generate_launch_description():
             PythonLaunchDescriptionSource(robot_description_path),
             launch_arguments={
                 'use_sim_time': LaunchConfiguration('use_sim_time', default='true'),
-                'publish_joints': 'false',
+                'publish_joints': 'true',
                 'rviz': 'false',
             }.items()
         ),

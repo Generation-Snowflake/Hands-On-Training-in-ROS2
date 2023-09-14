@@ -24,6 +24,9 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'goal_pose = mecanum_navigation.galactic_goal_pose:main',
+            'multi_goal_pose = mecanum_navigation.multi_waypoint:main',
+            'move_robot = mecanum_navigation.move_robot_using_twist:main',
         ],
     },
 )
