@@ -21,8 +21,6 @@
 - sudo apt-get install ros-galactic-cartographer
 
 
-
-
 #### Create pkg and build
 - Create YOUR_WS by ``mkdir <YOUR_WS>/src``
 - Get into YOUR_WS/src
@@ -39,3 +37,6 @@
 
 ## Ref
 - https://github.com/linorobot/linorobot2
+#### Encoder and SpeedControl
+- https://www.pjrc.com/teensy/td_libs_Encoder.html
+- https://github.com/phuwanat-vg/ros2_tutorial/blob/master/robot_firmware
