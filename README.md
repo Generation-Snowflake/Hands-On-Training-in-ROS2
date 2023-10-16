@@ -37,6 +37,7 @@
 
 ## Ref
 - https://github.com/linorobot/linorobot2
+- Mecanum formula -  https://ecam-eurobot.github.io/Tutorials/mechanical/mecanum.html
 #### Encoder and SpeedControl
 - https://www.pjrc.com/teensy/td_libs_Encoder.html
 - https://github.com/phuwanat-vg/ros2_tutorial/blob/master/robot_firmware
