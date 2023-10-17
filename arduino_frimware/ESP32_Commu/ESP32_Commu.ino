@@ -1,13 +1,13 @@
 #include <WiFi.h>
 #include "ESPAsyncWebServer.h"
 
-const char* ssid = "TP-Link_A550";
-const char* password = "23172845";
+const char* ssid = "GSF-WIFI1200";
+const char* password = "gsfrobotics";
 
 AsyncWebServer server(80);
 
-IPAddress local_IP(192, 168, 0, 62);
-IPAddress gateway(192, 168, 0, 1);
+IPAddress local_IP(192, 168, 8, 150);
+IPAddress gateway(192, 168, 8, 1);
 IPAddress subnet(255, 255, 255, 0);
 IPAddress primaryDNS(8, 8, 8, 8); //optional
 IPAddress secondaryDNS(8, 8, 4, 4); //optional
@@ -40,7 +40,7 @@ void setup() {
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
   //server.begin();
-  server.on("/", HTTP_GET, [](AsyncWebServerRequest * request) {
+  server.on("/", HTTP_GET, [](AsyncWebServerRequest * request) {`
 
     int paramsNr = request->params();
     //Serial.println(paramsNr);
