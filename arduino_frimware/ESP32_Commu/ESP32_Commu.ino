@@ -1,6 +1,6 @@
 #include <WiFi.h>
 #include "ESPAsyncWebServer.h"
-
+#define LEDPIN 2
 const char* ssid = "GSF-WIFI1200";
 const char* password = "gsfrobotics";
 
@@ -12,17 +12,25 @@ IPAddress subnet(255, 255, 255, 0);
 IPAddress primaryDNS(8, 8, 8, 8); //optional
 IPAddress secondaryDNS(8, 8, 4, 4); //optional
 
-
+int speed_a, speed_b, speed_c, speed_d;
+//int travel_time;
 uint32_t num;
 uint8_t power = 150;
-String getSens() {
+union packed_int {
+  int16_t i;
+  byte b[2];
+} travel_time;
+String getSens() {    
   return String(num++);
 }
 
 
 void setup() {
   // Serial port for debugging purposes
+  pinMode(LEDPIN, OUTPUT);
+  digitalWrite(LEDPIN, LOW);
   Serial.begin(115200);
+  Serial2.begin(57600);
   Serial.println();
 
     if (!WiFi.config(local_IP, gateway, subnet, primaryDNS, secondaryDNS)) {
@@ -35,12 +43,13 @@ void setup() {
     delay(500);
     Serial.print(".");
   }
+  digitalWrite(LEDPIN, HIGH);
   Serial.println("");
   Serial.println("WiFi connected");
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
   //server.begin();
-  server.on("/", HTTP_GET, [](AsyncWebServerRequest * request) {`
+  server.on("/", HTTP_GET, [](AsyncWebServerRequest * request) {
 
     int paramsNr = request->params();
     //Serial.println(paramsNr);
@@ -51,87 +60,39 @@ void setup() {
 
    if (p->name() == "A") {
         speed_a = (p->value()).toInt();
-        //control("1");
-        if (speed_a > 0) {
-
-          digitalWrite(motor1Pin1, LOW);
-          ledcWrite(1, abs(speed_a));
-        }
-        else if (speed_a < 0) {
-          digitalWrite(motor1Pin1, HIGH);
-          ledcWrite(1, abs(speed_a));
-        }
-        else {
-          digitalWrite(motor1Pin1, LOW);
-          ledcWrite(1, 0);
-        }
+        //Serial.println(speed_a);
     
       }
       ////////////////////////////////////////////////////
       if (p->name() == "B") {
         speed_b = (p->value()).toInt();
-        //control("2");
-        if (speed_b > 0) {
-
-          digitalWrite(motor2Pin1, LOW);
-          ledcWrite(2, abs(speed_b));
-        }
-        else if (speed_b < 0) {
-          digitalWrite(motor2Pin1, HIGH);
-          ledcWrite(2, abs(speed_b));
-        }
-        else {
-          digitalWrite(motor2Pin1, LOW);
-          ledcWrite(2, 0);
-        }
-      
       }
       ////////////////////////////////////////////////////
       if (p->name() == "C") {
         speed_c = (p->value()).toInt();
-        //control("3");
-        if (speed_c > 0) {
-
-          digitalWrite(motor3Pin1, LOW);
-          ledcWrite(3, abs(speed_c));
-        }
-        else if (speed_c < 0) {
-          digitalWrite(motor3Pin1, HIGH);
-          ledcWrite(3, abs(speed_c));
-        }
-        else {
-          digitalWrite(motor3Pin1, LOW);
-          ledcWrite(3, 0);
-        }
         
       }
       ////////////////////////////////////////////////////
       if (p->name() == "D") {
         speed_d = (p->value()).toInt();
-        //control("4");
-        if (speed_d > 0) {
-
-          digitalWrite(motor4Pin1, LOW);
-          ledcWrite(4, abs(speed_d));
-        }
-        else if (speed_d < 0) {
-          digitalWrite(motor4Pin1, HIGH);
-          ledcWrite(4, abs(speed_d));
-        }
-        else {
-          digitalWrite(motor4Pin1, LOW);
-          ledcWrite(4, 0);
-        }
+      }
+      ////////////////////////////////////////////////////
+      if (p->name() == "T") {
+        travel_time.i = (p->value()).toInt();
       }
 
-      
-    }
 
+    }
+    const char cmd[10] = {'#','b',byte(speed_a),byte(speed_b),byte(speed_c),byte(speed_d),byte(travel_time.b[1]),byte(travel_time.b[0]),'\r','\n'};
+    for(uint8_t i=0; i<10; i++){
+      Serial.write(cmd[i]);
+      Serial2.write(cmd[i]);
+    }   
     request->send(200, "text/plain", "message received");
   });
 
   server.begin();
 }
 void loop() {
-
+  delay(1000);
 }

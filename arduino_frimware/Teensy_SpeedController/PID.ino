@@ -19,25 +19,32 @@ void computePID1(double control_cmd,
 
   dErr1 = (err1 - prev_err1);
 
-  control_out1 = kp * err1 + ki * sumErr1 + kd * dErr1;
+  control_out1 = kp[0] * err1 + ki[0] * sumErr1 + kd[0] * dErr1;
 
-  if (control_out1 < 0) {
-    control_out1 = 0;
-  }
   prev_err1 = err1;
   prevTick1 = curTick1;
   control_out1 = constrain(control_out1,0 , 255);
-  if (dirs > 0.5) {
-    digitalWrite(motor1Pin1, LOW);
-    analogWrite(motor1Speed, control_out1);
+  if(control_cmd != 0.0){
+    if (dirs > 0.5) {
+      digitalWrite(motor1Pin1, LOW);
+      analogWrite(motor1Speed, control_out1);
+    }
+    else if (dirs < -0.5) {
+      digitalWrite(motor1Pin1, HIGH);
+      analogWrite(motor1Speed, control_out1);
+    }
+    else {
+      digitalWrite(motor1Pin1, LOW);
+      analogWrite(motor1Speed, 0);
+    }
   }
-  else if (dirs < -0.5) {
-    digitalWrite(motor1Pin1, HIGH);
-    analogWrite(motor1Speed, control_out1);
-  }
-  else {
-    digitalWrite(motor1Pin1, LOW);
-    analogWrite(motor1Speed, 0);
+  else{
+      digitalWrite(motor1Pin1, LOW);
+      analogWrite(motor1Speed, 0);
+      err1 = 0.0;
+      prev_err1 = 0.0;
+      sumErr1 = 0.0;
+      dErr1 = 0.0;
   }
   //Serial.println(measuredRPM1);
 
@@ -68,28 +75,34 @@ void computePID2(double control_cmd,
 
   dErr2 = (err2 - prev_err2);
 
-  control_out2 = kp * err2 + ki * sumErr2 + kd * dErr2;
+  control_out2 = kp[1] * err2 + ki[1] * sumErr2 + kd[1] * dErr2;
 
-  if (control_out2 < 0) {
-    control_out2 = 0;
-  }
   prev_err2 = err2;
   prevTick2 = curTick2;
   control_out2 = constrain(control_out2,0 , 255);
-
-  if (dirs > 0.5) {
-
+  if(control_cmd != 0.0){
+    if (dirs > 0.5) {
+  
+      digitalWrite(motor2Pin1, LOW);
+      analogWrite(motor2Speed, control_out2);
+    }
+    else if (dirs < -0.5) {
+      digitalWrite(motor2Pin1, HIGH);
+      analogWrite(motor2Speed, control_out2);
+    }
+    else {
+      digitalWrite(motor2Pin1, LOW);
+      analogWrite(motor2Speed, 0);
+    }
+  }
+   else{
     digitalWrite(motor2Pin1, LOW);
-    analogWrite(motor2Speed, control_out2);
-  }
-  else if (dirs < -0.5) {
-    digitalWrite(motor2Pin1, HIGH);
-    analogWrite(motor2Speed, control_out2);
-  }
-  else {
-    digitalWrite(motor2Pin1, LOW);
-    analogWrite(motor2Speed, control_out2);
-  }
+    analogWrite(motor2Speed, 0);
+    err2 = 0.0;
+    prev_err2 = 0.0;
+    sumErr2 = 0.0;
+    dErr2 = 0.0;
+   }
   //Serial.println(measuredRPM2);
 
   //Serial.println("Sum error  "+String(sumErr1));
@@ -118,27 +131,33 @@ void computePID3(double control_cmd,
 
   dErr3 = err3 - prev_err3;
 
-  control_out3 = kp * err3 + ki * sumErr3 + kd * dErr3;
+  control_out3 = kp[2] * err3 + ki[2] * sumErr3 + kd[2] * dErr3;
 
-  if (control_out3 < 0) {
-    control_out3 = 0;
-  }
   prev_err3 = err3;
   prevTick3 = curTick3;
   control_out3 = constrain(control_out3,0 , 255);
-
-  if (dirs > 0.5) {
-
-    digitalWrite(motor3Pin1, LOW);
-    analogWrite(motor3Speed, control_out3);
+  if(control_cmd != 0.0){
+    if (dirs > 0.5) {
+  
+      digitalWrite(motor3Pin1, LOW);
+      analogWrite(motor3Speed, control_out3);
+    }
+    else if (dirs < -0.5) {
+      digitalWrite(motor3Pin1, HIGH);
+      analogWrite(motor3Speed, control_out3);
+    }
+    else {
+      digitalWrite(motor3Pin1, LOW);
+      analogWrite(motor3Speed, 0);
+    }
   }
-  else if (dirs < -0.5) {
-    digitalWrite(motor3Pin1, HIGH);
-    analogWrite(motor3Speed, control_out3);
-  }
-  else {
+  else{
     digitalWrite(motor3Pin1, LOW);
     analogWrite(motor3Speed, 0);
+    err3 = 0.0;
+    prev_err3 = 0.0;
+    sumErr3 = 0.0;
+    dErr3 = 0.0;
   }
   
   //Serial.println(measuredRPM3);
@@ -169,27 +188,33 @@ void computePID4(double control_cmd,
 
   dErr4 = err4 - prev_err4;
 
-  control_out4 = kp * err4 + ki * sumErr4 + kd * dErr4;
-
-  if (control_out4 < 0) {
-    control_out4 = 0;
-  }
+  control_out4 = kp[3] * err4 + ki[3] * sumErr4 + kd[3] * dErr4;
+  
   prev_err4 = err4;
   prevTick4 = curTick4;
   control_out4 = constrain(control_out4,0 , 255);
-
-  if (dirs > 0.5) {
-
-    digitalWrite(motor4Pin1, LOW);
-    analogWrite(motor4Speed, control_out4);
+  if(control_cmd != 0.0){
+    if (dirs > 0.5) {
+  
+      digitalWrite(motor4Pin1, LOW);
+      analogWrite(motor4Speed, control_out4);
+    }
+    else if (dirs < -0.5) {
+      digitalWrite(motor4Pin1, HIGH);
+      analogWrite(motor4Speed, control_out4);
+    }
+    else {
+      digitalWrite(motor4Pin1, LOW);
+      analogWrite(motor4Speed, 0);
+    }
   }
-  else if (dirs < -0.5) {
-    digitalWrite(motor4Pin1, HIGH);
-    analogWrite(motor4Speed, control_out4);
-  }
-  else {
-    digitalWrite(motor4Pin1, LOW);
-    analogWrite(motor4Speed, 0);
+  else{
+      digitalWrite(motor4Pin1, LOW);
+      analogWrite(motor4Speed, 0);
+      err4 = 0.0;
+      prev_err4 = 0.0;
+      sumErr4 = 0.0;
+      dErr4 = 0.0;
   }
  //Serial.println(measuredRPM4);
 
