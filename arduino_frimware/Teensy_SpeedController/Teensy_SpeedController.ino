@@ -15,9 +15,9 @@
 #define motor4Pin1 21    // Set pin for Motor a
 #define motor4Speed 22
 
-Encoder encM1(3, 4); // Motor3
-Encoder encM2(11, 12); // Motor3
-Encoder encM3(6, 5); // Motor3
+Encoder encM1(4, 3); // Motor3
+Encoder encM2(12, 11); // Motor3
+Encoder encM3(5, 6); // Motor3
 Encoder encM4(9, 10); //Motor 4
 
 // PID control parameters
@@ -132,9 +132,9 @@ void timeControl(){
 
 void SerialEvent3(){
   while(Serial3.available()){
-    Serial.print("Active...");
+    //Serial.print("Active...");
     byte cmd = (byte) Serial3.read();
-    Serial.println(byte(cmd));
+    //Serial.println(byte(cmd));
     _buffer[idx] = cmd;
     if((idx == 0) && _buffer[0] != '#'){
       setALLsetpoint(0.0);
@@ -179,13 +179,13 @@ void setup() {
 void loop() {
   SerialEvent3();
   timeControl();
-  //setpointM1 = 50.0;
+  //setpointM1 = -50.0;
   //setpointM2 = 50.0;
-  //setpointM3 = 50.0;
-  //setpointM4 = 50.0;
+  //setpointM3 = -50.0;
+  //setpointM4 = -50.0;
   //digitalWrite(motor1Pin1, LOW);
   //analogWrite(motor1Speed, 50);
-  //digitalWrite(motor3Pin1, LOW);
+  //digitalWrite(motor3Pin1, LOW);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
   //analogWrite(motor3Speed, 50);
   //Serial.println(counter1);
   //testDistance();
