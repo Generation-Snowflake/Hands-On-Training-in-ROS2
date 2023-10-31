@@ -1,13 +1,13 @@
 #include <WiFi.h>
 #include "ESPAsyncWebServer.h"
-#define LEDPIN 2
-const char* ssid = "GSF-WIFI1200";
-const char* password = "gsfrobotics";
+#define LEDPIN 5
+const char* ssid = "TP-Link_A550";
+const char* password = "23172845";
 
 AsyncWebServer server(80);
 
-IPAddress local_IP(192, 168, 8, 150);
-IPAddress gateway(192, 168, 8, 1);
+IPAddress local_IP(192, 168, 0, 62);
+IPAddress gateway(192, 168, 0, 1);
 IPAddress subnet(255, 255, 255, 0);
 IPAddress primaryDNS(8, 8, 8, 8); //optional
 IPAddress secondaryDNS(8, 8, 4, 4); //optional
@@ -28,7 +28,7 @@ String getSens() {
 void setup() {
   // Serial port for debugging purposes
   pinMode(LEDPIN, OUTPUT);
-  digitalWrite(LEDPIN, LOW);
+  digitalWrite(LEDPIN, HIGH);
   Serial.begin(115200);
   Serial2.begin(57600);
   Serial.println();
@@ -43,7 +43,7 @@ void setup() {
     delay(500);
     Serial.print(".");
   }
-  digitalWrite(LEDPIN, HIGH);
+  digitalWrite(LEDPIN, LOW);
   Serial.println("");
   Serial.println("WiFi connected");
   Serial.println("IP address: ");

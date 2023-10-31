@@ -2,12 +2,12 @@ import requests
 import threading
 import numpy as np
 import math
-esp_ip = "192.168.8.150"
+esp_ip = "192.168.0.62"
 CO_B = 0
 CO_A = 0
 motor_speed = [0, 0, 0, 0] 
 robot_speed = 50.0 #rpm = 50 -> v = 0.2487 m/s
-rotation_speed = 1.3785 #rad/s
+rotation_speed = 1.3785  #rad/s -> wz
 wheel_radius = 0.052
 lx = 0.105 #21cm / 2
 ly = 0.0925 #18.5cm / 2

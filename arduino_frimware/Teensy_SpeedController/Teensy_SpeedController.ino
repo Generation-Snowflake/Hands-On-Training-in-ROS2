@@ -7,7 +7,7 @@
 #include <Encoder.h>
 #define LEDPIN 13
 #define motor1Pin1 16
-#define motor1Speed 7
+#define motor1Speed 1
 #define motor2Pin1 17
 #define motor2Speed 18
 #define motor3Pin1 20   
@@ -15,9 +15,9 @@
 #define motor4Pin1 21    // Set pin for Motor a
 #define motor4Speed 22
 
-Encoder encM1(4, 3); // Motor3
-Encoder encM2(12, 11); // Motor3
-Encoder encM3(5, 6); // Motor3
+Encoder encM1(3, 4); // Motor3
+Encoder encM2(11, 12); // Motor3
+Encoder encM3(6, 5); // Motor3
 Encoder encM4(9, 10); //Motor 4
 
 // PID control parameters
@@ -105,20 +105,6 @@ void loopControl(void)
   computePID4(setpointM4,counter4);
 }
 
-void testDistance(void){
-  setALLsetpoint(50.0);
-  long currentTime = millis();
-  int ctrlLoop = 4800;
-  while((millis() - currentTime) <= ctrlLoop){
-    Serial.println(millis() - currentTime);
-      setALLsetpoint(-50.0);
-  }
-  while(true){ //stop
-    //Serial.println(setpointM1);
-    setALLsetpoint(0.0);
-  }
-  
-}
 void encRead(){
   counter1 = encM1.read();
   counter2 = encM2.read();
@@ -146,9 +132,9 @@ void timeControl(){
 
 void SerialEvent3(){
   while(Serial3.available()){
-    //Serial.print("Active...");
+    Serial.print("Active...");
     byte cmd = (byte) Serial3.read();
-    //Serial.println(byte(cmd));
+    Serial.println(byte(cmd));
     _buffer[idx] = cmd;
     if((idx == 0) && _buffer[0] != '#'){
       setALLsetpoint(0.0);
@@ -173,10 +159,6 @@ void SerialEvent3(){
   }
 }
 void setup() {
-  Serial.begin(115200);
-  Serial3.begin(57600);
-  Timer1.initialize(10000); //pin 7,8
-  Timer1.attachInterrupt(loopControl); // blinkLED to run every 0.15 seconds
   pinMode(LEDPIN, OUTPUT);
   pinMode(motor1Pin1, OUTPUT);
   pinMode(motor1Speed, OUTPUT);
@@ -186,6 +168,11 @@ void setup() {
   pinMode(motor3Speed, OUTPUT);
   pinMode(motor4Pin1, OUTPUT);
   pinMode(motor4Speed, OUTPUT);
+  //setALLsetpoint(0.0);
+  Timer1.initialize(10000); //pin 7,8
+  Timer1.attachInterrupt(loopControl); //run every 0.15s
+  Serial.begin(115200);
+  Serial3.begin(57600);
   digitalWrite(LEDPIN, HIGH);
 }
 
@@ -193,9 +180,14 @@ void loop() {
   SerialEvent3();
   timeControl();
   //setpointM1 = 50.0;
+  //setpointM2 = 50.0;
+  //setpointM3 = 50.0;
+  //setpointM4 = 50.0;
+  //digitalWrite(motor1Pin1, LOW);
+  //analogWrite(motor1Speed, 50);
   //digitalWrite(motor3Pin1, LOW);
   //analogWrite(motor3Speed, 50);
-  //Serial.println(travel_time);
+  //Serial.println(counter1);
   //testDistance();
 
 }
